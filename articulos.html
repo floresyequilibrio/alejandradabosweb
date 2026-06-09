@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartas del Método · Alejandra Dabos · Real Mind Method™</title>
+<meta name="description" content="Reflexiones clínicas sobre los mecanismos invisibles que gobiernan la decisión, la lucidez y la identidad bajo alta exigencia. Real Mind Method™ · Alejandra Dabos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+:root{
+  --cream:#FAF8F4;--warm:#F2EDE4;--warm-2:#EDE7DA;--stone:#DDD5C8;
+  --muted:#9A8F82;--ink:#1E1C18;--dark:#0E0E0C;--navy:#0D1117;
+  --navy-2:#161B22;--gold:#C49A45;--gold-soft:#D4B06A;
+  --gold-faint:#F5EDD8;--gold-line:rgba(196,154,69,.18);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --r-pill:999px;--r-md:8px;
+}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.65;font-size:16px;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
+p{font-size:16px;line-height:1.7}
+.eyebrow{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.accent{font-style:italic;color:var(--gold)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;background:rgba(13,17,23,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-line)}
+.nav-logo{display:flex;align-items:center;gap:.9rem;font-family:var(--serif);font-size:1.05rem;font-weight:500;color:var(--cream);letter-spacing:.02em}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.15}
+.nav-logo-text em{color:var(--gold);font-style:italic;font-weight:400;font-size:.68em;letter-spacing:.04em;margin-top:3px}
+.nav-links{display:flex;gap:2.2rem;align-items:center}
+.nav-links a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color .25s ease}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--dark);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.65rem 1.4rem;border-radius:var(--r-pill);transition:all .25s ease}
+.nav-cta:hover{background:var(--gold-soft);transform:translateY(-1px)}
+@media(max-width:880px){.nav-links{display:none};nav{padding:.9rem 1.4rem}}
+
+/* HERO */
+#hero-cartas{background:var(--navy);padding:8rem 2rem 5rem;position:relative;overflow:hidden}
+#hero-cartas::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 70%,rgba(196,154,69,.07) 0%,transparent 60%);pointer-events:none}
+.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.hero-eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;font-weight:400}
+.hero-h1{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:300;line-height:1;color:var(--cream);margin-bottom:.8rem;letter-spacing:-.02em}
+.hero-h1 .accent{font-style:italic;color:var(--gold)}
+.hero-sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,1.8vw,1.4rem);color:rgba(250,248,244,.6);font-weight:300;line-height:1.5;max-width:620px;margin-bottom:2.4rem}
+.hero-meta{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,248,244,.35)}
+
+/* NEWSLETTER */
+#newsletter{background:var(--warm-2);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone);padding:4.5rem 2rem}
+.nl-inner{max-width:640px;margin:0 auto;text-align:center}
+.nl-eyebrow{margin-bottom:1rem}
+.nl-h{font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.8rem);font-weight:300;line-height:1.15;color:var(--ink);margin-bottom:1rem}
+.nl-h .accent{font-style:italic;color:var(--gold)}
+.nl-sub{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--muted);line-height:1.55;margin-bottom:2rem;font-weight:400}
+.nl-form{display:flex;gap:.75rem;max-width:480px;margin:0 auto}
+.nl-input{flex:1;padding:.9rem 1.2rem;border:1px solid var(--stone);background:var(--cream);font-family:var(--sans);font-size:.95rem;color:var(--ink);outline:none;transition:border-color .25s ease;border-radius:var(--r-md)}
+.nl-input::placeholder{color:var(--muted)}
+.nl-input:focus{border-color:var(--gold)}
+.nl-btn{background:var(--gold);color:var(--dark);padding:.9rem 1.6rem;border:none;border-radius:var(--r-pill);font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .25s ease;white-space:nowrap}
+.nl-btn:hover{background:var(--gold-soft);transform:translateY(-1px)}
+.nl-note{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:1rem}
+.nl-success{display:none;font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--ink);line-height:1.5}
+@media(max-width:560px){.nl-form{flex-direction:column};.nl-btn{width:100%}}
+
+/* GRID CARTAS */
+#cartas{background:var(--cream);padding:5rem 2rem 6rem}
+.cartas-header{text-align:center;margin-bottom:4rem}
+.cartas-h{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.1;margin-top:1rem;color:var(--ink)}
+.cartas-h .accent{font-style:italic;color:var(--gold)}
+.cartas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1px;max-width:1200px;margin:0 auto;background:var(--stone)}
+.carta-card{background:var(--cream);padding:2.4rem 2rem;display:flex;flex-direction:column;transition:background .25s ease;position:relative}
+.carta-card:hover{background:var(--warm)}
+.carta-num{font-family:var(--serif);font-style:italic;font-size:1rem;color:rgba(196,154,69,.5);margin-bottom:.6rem;display:block}
+.carta-title{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:.8rem}
+.carta-extract{font-size:.9rem;color:var(--muted);line-height:1.7;flex-grow:1;margin-bottom:1.4rem}
+.carta-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--stone)}
+.carta-link{font-size:.82rem;font-style:italic;font-family:var(--serif);color:var(--muted);transition:color .25s ease}
+.carta-card:hover .carta-link{color:var(--gold)}
+.carta-time{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* PSICOLOGIA Y MENTE */
+#externo{background:var(--warm);border-top:1px solid var(--stone);padding:4rem 2rem}
+.ext-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.ext-text .eyebrow{margin-bottom:1rem}
+.ext-h{font-family:var(--serif);font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:300;line-height:1.15;color:var(--ink);margin-bottom:1rem}
+.ext-h .accent{font-style:italic;color:var(--gold)}
+.ext-body{font-size:.97rem;line-height:1.75;color:var(--ink);margin-bottom:1.4rem}
+.ext-stat{font-family:var(--serif);font-size:2.8rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.3rem}
+.ext-stat-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.ext-stats{display:flex;gap:2.5rem;margin-top:1.8rem}
+.btn-ghost-dark{display:inline-flex;align-items:center;gap:.6rem;background:transparent;color:var(--ink);padding:.85rem 1.6rem;border-radius:var(--r-pill);font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;transition:all .25s ease;border:1px solid var(--stone)}
+.btn-ghost-dark:hover{border-color:var(--gold);color:var(--gold)}
+@media(max-width:720px){.ext-inner{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer{background:var(--navy-2);padding:3rem 2rem;text-align:center;border-top:1px solid var(--gold-line);color:var(--muted)}
+.footer-logo{font-family:var(--serif);font-size:1.2rem;color:var(--cream);margin-bottom:.8rem}
+.footer-logo span{color:var(--gold);font-style:italic}
+.footer-meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem}
+.footer-legal-links{display:flex;align-items:center;justify-content:center;gap:.8rem;margin-bottom:1.6rem;flex-wrap:wrap}
+.footer-legal-links a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,248,244,.55);transition:color .25s ease;border-bottom:1px solid rgba(250,248,244,.12);padding-bottom:2px}
+.footer-legal-links a:hover{color:var(--gold)}
+.footer-sep{color:rgba(250,248,244,.25);font-size:11px}
+.footer-bottom{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,248,244,.3);padding-top:1.4rem;border-top:1px solid rgba(250,248,244,.08);margin-top:1.4rem}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s cubic-bezier(.21,.61,.35,1)}
+.reveal.on{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-text">Alejandra Dabos <em>· Real Mind Method™</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#method">Método</a></li>
+    <li><a href="index.html#services">Servicios</a></li>
+    <li><a href="articulos.html" class="active">Cartas</a></li>
+    <li><a href="libro.html">El Libro</a></li>
+  </ul>
+  <a href="https://wa.me/5492234973418?text=Hola%20Alejandra%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20inicial" class="nav-cta" target="_blank" rel="noopener">Agendar Diagnóstico</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero-cartas">
+  <div class="hero-inner">
+    <p class="hero-eyebrow reveal">Real Mind Method™ · Archivo</p>
+    <h1 class="hero-h1 reveal reveal-delay-1">
+      Cartas del <span class="accent">Método</span>
+    </h1>
+    <p class="hero-sub reveal reveal-delay-2">
+      Reflexiones clínicas sobre los mecanismos invisibles que gobiernan la decisión, la lucidez y la identidad bajo alta exigencia.
+    </p>
+    <p class="hero-meta reveal reveal-delay-3">Alejandra Dabos · 8 cartas publicadas</p>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="nl-inner">
+    <p class="eyebrow nl-eyebrow reveal">Newsletter · Cartas del Método</p>
+    <h2 class="nl-h reveal reveal-delay-1">
+      Recibí cada nueva carta<br><span class="accent">directamente.</span>
+    </h2>
+    <p class="nl-sub reveal reveal-delay-2">
+      Una carta por semana. Sin ruido. Solo el mecanismo que más importa conocer en este momento de tu vida profesional.
+    </p>
+    <div id="nl-form-wrap" class="reveal reveal-delay-3">
+      <form class="nl-form" onsubmit="handleNL(event)">
+        <input type="email" class="nl-input" id="nl-email" placeholder="Tu email profesional" required>
+        <button type="submit" class="nl-btn">Suscribirme →</button>
+      </form>
+      <p class="nl-note">Sin spam. Cancelás cuando querés.</p>
+    </div>
+    <p class="nl-success" id="nl-success">
+      Perfecto. Te escribo pronto.<br>
+      <em>— Alejandra</em>
+    </p>
+  </div>
+</section>
+
+<!-- CARTAS GRID -->
+<section id="cartas">
+  <div class="cartas-header">
+    <p class="eyebrow reveal">Todas las cartas</p>
+    <h2 class="cartas-h reveal reveal-delay-1">El archivo del <span class="accent">Real Mind Method™</span></h2>
+  </div>
+
+  <div class="cartas-grid">
+
+    <a href="articulos/mapa-de-la-decision.html" class="carta-card reveal">
+      <span class="carta-num">Carta 01</span>
+      <h3 class="carta-title">El Mapa de la Decisión: la revolución neurobiológica del Instante Cero.</h3>
+      <p class="carta-extract">Lo que llamamos "tomar una decisión" es la última escena de un proceso que ya ocurrió. Antes de que pienses, tu cerebro ya predijo, descartó e inclinó la balanza. Esta carta explora por qué la calidad de tus decisiones depende de un mecanismo que opera antes de que lo notes.</p>
+      <div class="carta-footer">
+        <span class="carta-link">Leer carta →</span>
+        <span class="carta-time">6 min</span>
+      </div>
+    </a>
+
+    <a href="articulos/neurobiologia-del-presente.html" class="carta-card reveal reveal-delay-1">
+      <span class="carta-num">Carta 02</span>
+      <h3 class="carta-title">La Neurobiología del Presente: autoliderazgo y soberanía biológica.</h3>
+      <p class="carta-extract">Hay personas que tienen agenda, equipo, ingresos y resultados, y aún así no se sienten dueñas de su propio día. Esa distancia entre el control externo y la autoridad interna es lo que llamo, en términos clínicos, falta de soberanía biológica.</p>
+      <div class="carta-footer">
+        <span class="carta-link">Leer carta →</span>
+        <span class="carta-time">7 min</span>
+      </div>
+    </a>
+
+    <a href="articulos/sindrome-del-impostor.html" class="carta-card reveal reveal-delay-2">
+      <span class="carta-num">Carta 03</span>
+      <h3 class="carta-title">¿Crees que tu éxito es suerte? El síndrome del impostor.</h3>
+      <p class="carta-extract">El síndrome del impostor no aparece en quienes saben poco. Aparece, casi exclusivamente, en personas que saben mucho. Esa paradoja es la primera pista de que no es un problema de información, sino de identidad bajo presión.</p>
+      <div class="carta-footer">
+        <span class="carta-link">Leer carta →</span>
+        <span class="carta-time">5 min</span>
+      </div>
+    </a>
+
+    <a href="articulos/sesgos-cognitivos-inversiones.html" class="carta-card reveal">
+      <span class="carta-num">Carta 04</span>
+      <h3 class="carta-title">Los sesgos cognitivos que corrompen grandes inversiones.</h3>
+      <p class="carta-extract">Un CEO me contactó tres meses después de firmar una inversión que, en el fondo, ya sabía que estaba mal. No era un hombre impulsivo. Era brillante, experimentado, con décadas de decisiones exitosas detrás. Y aun así, su cerebro le había jugado una trampa silenciosa.</p>
+      <div class="carta-footer">
+        <span class="carta-link">Leer carta →</span>
+        <span class="carta-time">7 min</span>
+      </div>
+    </a>
+
+    <a href="articulos/decir-no-sin-culpa.html" class="carta-card reveal reveal-delay-1">
+      <span class="carta-num">Carta 05</span>
+      <h3 class="carta-title">Cómo entrenar tu cerebro para decir NO sin culpa y recuperar tu energía.</h3>
+      <p class="carta-extract">Hay una sensación inconfundible que llega justo después de que tu boca dice "sí" mientras tu interior grita un "NO" rotundo. Ese conflicto no es un defecto de carácter. Es neurobiología que podés reconfigurar.</p>
+      <div class="carta-footer">
+        <span class="carta-link">Leer carta →</span>
+        <span class="carta-time">6 min</span>
+      </div>
+    </a>
+
+    <a href="articulos/biohacking-del-lenguaje.html" class="carta-card reveal reveal-delay-2">
+      <span class="carta-num">Carta 06</span>
+      <h3 class="carta-title">Biohacking del lenguaje: cómo tus palabras reconfiguran el cerebro.</h3>
+      <p class="carta-extract">Las palabras que usás en tu próxima reunión van a elevar el cortisol de tu equipo o van a activar su dopamina. No es metáfora. Es la neurobiología del liderazgo que ningún MBA enseña — y que podés empezar a aplicar hoy.</p>
+      <div class="carta-footer">
+        <span class="carta-link">Leer carta →</span>
+        <span class="carta-time">6 min</span>
+      </div>
+    </a>
+
+    <a href="articulos/procrastinacion-no-es-pereza.html" class="carta-card reveal">
+      <span class="carta-num">Carta 07</span>
+      <h3 class="carta-title">Procrastinación: por qué no es pereza y cómo superar el hábito de postergar.</h3>
+      <p class="carta-extract">¿Por qué, si sabés exactamente qué tenés que hacer, no lo hacés? La respuesta no está en la disciplina ni en la motivación. Está en un mecanismo neurológico que opera antes de que tu consciencia pueda intervenir.</p>
+      <div class="carta-footer">
+        <span class="carta-link">Leer carta →</span>
+        <span class="carta-time">5 min</span>
+      </div>
+    </a>
+
+    <a href="articulos/ansiedad-brujula-interna.html" class="carta-card reveal reveal-delay-1">
+      <span class="carta-num">Carta 08</span>
+      <h3 class="carta-title">La ansiedad: de enemiga a brújula interna.</h3>
+      <p class="carta-extract">La ansiedad no está aquí para atacarte. Está aquí para avisarte que algo en tu vida no está alineado. Aprender a leer ese mensaje — en lugar de apagarlo — es una de las habilidades más poderosas que podés desarrollar.</p>
+      <div class="carta-footer">
+        <span class="carta-link">Leer carta →</span>
+        <span class="carta-time">5 min</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- PSICOLOGÍA Y MENTE -->
+<section id="externo">
+  <div class="ext-inner">
+    <div class="ext-text">
+      <p class="eyebrow reveal">También publicado en</p>
+      <h2 class="ext-h reveal reveal-delay-1">
+        Columnista en<br><span class="accent">Psicología y Mente.</span>
+      </h2>
+      <p class="ext-body reveal reveal-delay-2">
+        Además de las Cartas del Método, Alejandra Dabos publica regularmente en Psicología y Mente — la mayor plataforma de divulgación científica en español — con artículos sobre neurociencia aplicada, toma de decisiones y liderazgo.
+      </p>
+      <a href="https://psicologiaymente.com/psicologos/2056366/alejandra-dabos" class="btn-ghost-dark reveal reveal-delay-3" target="_blank" rel="noopener">Ver perfil en Psicología y Mente ↗</a>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div class="ext-stats">
+        <div>
+          <p class="ext-stat">4M</p>
+          <p class="ext-stat-label">Lectores mensuales</p>
+        </div>
+        <div>
+          <p class="ext-stat">7+</p>
+          <p class="ext-stat-label">Artículos publicados</p>
+        </div>
+        <div>
+          <p class="ext-stat">2</p>
+          <p class="ext-stat-label">Ediciones: AR · US</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo">Alejandra Dabos <span>· Real Mind Method™</span></p>
+  <p class="footer-meta">Mar del Plata · Argentina · contacto@alejandradabos.com</p>
+  <div class="footer-legal-links">
+    <a href="politica-privacidad.html">Política de Privacidad</a>
+    <span class="footer-sep">·</span>
+    <a href="terminos-condiciones.html">Términos y Condiciones</a>
+  </div>
+  <p class="footer-bottom">© <span id="year"></span> Alejandra Dabos · Todos los derechos reservados</p>
+</footer>
+
+<script>
+// Reveal on scroll
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)} });
+},{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+window.addEventListener('load',()=>{
+  document.querySelectorAll('#hero-cartas .reveal').forEach(el=>el.classList.add('on'));
+});
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Newsletter form
+function handleNL(e) {
+  e.preventDefault();
+  const email = document.getElementById('nl-email').value;
+  if (!email) return;
+  // Replace this URL with your actual MailerLite / Mailchimp endpoint
+  // For now shows success message
+  document.getElementById('nl-form-wrap').style.display = 'none';
+  const success = document.getElementById('nl-success');
+  success.style.display = 'block';
+  // Optionally send to your backend:
+  // fetch('https://tu-endpoint.com/subscribe', {method:'POST',body:JSON.stringify({email}),headers:{'Content-Type':'application/json'}})
+}
+</script>
+
+</body>
+</html>
