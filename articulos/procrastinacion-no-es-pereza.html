@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Procrastinación: por qué no es pereza y cómo superar el hábito de postergar · Alejandra Dabos</title>
+<meta name="description" content="Las causas reales de la postergación y el protocolo neurobiológico para revertirla.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+:root{
+  --cream:#FAF8F4;--warm:#F2EDE4;--warm-2:#EDE7DA;--stone:#DDD5C8;
+  --muted:#9A8F82;--ink:#1E1C18;--dark:#0E0E0C;--navy:#0D1117;
+  --navy-2:#161B22;--gold:#C49A45;--gold-soft:#D4B06A;
+  --gold-line:rgba(196,154,69,.18);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --r-pill:999px;
+}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.65;font-size:16px;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
+p{font-size:16px;line-height:1.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;background:rgba(13,17,23,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-line)}
+.nav-logo{display:flex;align-items:center;gap:.9rem;font-family:var(--serif);font-size:1.05rem;font-weight:500;color:var(--cream);letter-spacing:.02em}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.15}
+.nav-logo-text em{color:var(--gold);font-style:italic;font-weight:400;font-size:.68em;letter-spacing:.04em;margin-top:3px}
+.nav-links{display:flex;gap:2.2rem;align-items:center}
+.nav-links a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color .25s ease}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--dark);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.65rem 1.4rem;border-radius:var(--r-pill);transition:all .25s ease}
+.nav-cta:hover{background:var(--gold-soft);transform:translateY(-1px)}
+@media(max-width:880px){.nav-links{display:none};nav{padding:.9rem 1.4rem}}
+.art-hero{background:var(--navy);padding:8rem 2rem 5rem;position:relative;overflow:hidden}
+.art-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 70%,rgba(196,154,69,.07) 0%,transparent 60%);pointer-events:none}
+.art-hero-inner{max-width:820px;margin:0 auto;position:relative;z-index:1}
+.art-eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;font-weight:400}
+.art-hero-h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:300;line-height:1.05;color:var(--cream);margin-bottom:1.2rem;letter-spacing:-.02em}
+.art-hero-sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,1.8vw,1.35rem);color:rgba(250,248,244,.6);font-weight:300;line-height:1.5;border-left:1px solid var(--gold);padding-left:1.2rem;margin-bottom:2.4rem;max-width:640px}
+.art-meta{display:flex;align-items:center;gap:1.8rem;flex-wrap:wrap}
+.art-meta-item{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,248,244,.4)}
+.art-meta-sep{width:3px;height:3px;border-radius:50%;background:var(--gold);opacity:.4}
+.art-body-wrap{max-width:720px;margin:0 auto;padding:5rem 2rem 6rem}
+.art-body p{font-size:1.05rem;line-height:1.85;color:var(--ink);margin-bottom:1.4rem}
+.art-body h2{font-family:var(--serif);font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:400;color:var(--ink);margin:3rem 0 1.2rem;line-height:1.15}
+.art-body h3{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--ink);margin:2rem 0 .8rem}
+.art-body blockquote{border-left:2px solid var(--gold);padding:.8rem 1.4rem;margin:2rem 0;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--ink);line-height:1.5}
+.art-body .impact{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--ink);line-height:1.4;margin:2.4rem 0;padding:1.4rem 0;border-top:.5px solid var(--stone);border-bottom:.5px solid var(--stone);text-align:center}
+.art-body strong{font-weight:500;color:var(--ink)}
+.art-body ul{margin:1rem 0 1.4rem 1.4rem}
+.art-body ul li{font-size:1.05rem;line-height:1.85;color:var(--ink);margin-bottom:.6rem}
+.art-cta-box{background:var(--navy);padding:2.4rem 2.8rem;margin:3.5rem 0 0}
+.art-cta-box p.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem}
+.art-cta-box h3{font-family:var(--serif);font-size:1.6rem;font-weight:300;color:var(--cream);line-height:1.2;margin-bottom:1rem}
+.art-cta-box p.desc{font-size:.95rem;color:rgba(250,248,244,.65);line-height:1.65;margin-bottom:1.6rem}
+.btn-gold{display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:var(--dark);padding:.85rem 1.8rem;border-radius:var(--r-pill);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;transition:all .25s ease;border:1px solid var(--gold)}
+.btn-gold:hover{background:var(--gold-soft);transform:translateY(-1px)}
+.art-nav-cards{background:var(--warm);border-top:1px solid var(--stone);padding:3rem 2rem}
+.art-nav-cards-inner{max-width:720px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.art-nav-card{padding:1.4rem 1.6rem;border:1px solid var(--stone);transition:border-color .25s ease}
+.art-nav-card:hover{border-color:var(--gold)}
+.art-nav-card-dir{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.art-nav-card-title{font-family:var(--serif);font-size:1.1rem;color:var(--ink);line-height:1.3}
+.art-nav-card--right{text-align:right}
+@media(max-width:600px){.art-nav-cards-inner{grid-template-columns:1fr}}
+footer{background:var(--navy-2);padding:3rem 2rem;text-align:center;border-top:1px solid var(--gold-line);color:var(--muted)}
+.footer-logo{font-family:var(--serif);font-size:1.2rem;color:var(--cream);margin-bottom:.8rem}
+.footer-logo span{color:var(--gold);font-style:italic}
+.footer-meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem}
+.footer-bottom{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,248,244,.3);padding-top:1.4rem;border-top:1px solid rgba(250,248,244,.08);margin-top:1.4rem}
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <span class="nav-logo-text">Alejandra Dabos <em>· Real Mind Method™</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#method">Método</a></li>
+    <li><a href="../index.html#services">Servicios</a></li>
+    <li><a href="../articulos.html">Cartas</a></li>
+    <li><a href="../libro.html">El Libro</a></li>
+  </ul>
+  <a href="https://wa.me/5492234973418?text=Hola%20Alejandra%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20inicial" class="nav-cta" target="_blank" rel="noopener">Agendar Diagnóstico</a>
+</nav>
+
+<header class="art-hero">
+  <div class="art-hero-inner">
+    <p class="art-eyebrow">Carta del Método · 07</p>
+    <h1 class="art-hero-h1">Procrastinación: por qué no es pereza</h1>
+    <p class="art-hero-sub">Las causas reales de la postergación y el protocolo neurobiológico para revertirla.</p>
+    <div class="art-meta">
+      <span class="art-meta-item">Alejandra Dabos</span>
+      <span class="art-meta-sep"></span>
+      <span class="art-meta-item">Real Mind Method™</span>
+      <span class="art-meta-sep"></span>
+      <span class="art-meta-item">5 min de lectura</span>
+    </div>
+  </div>
+</header>
+
+<article class="art-body-wrap">
+  <div class="art-body">
+    <p>En las consultas, las personas suelen pedir ayuda para dejar de dar vueltas, poder sentarse a trabajar, comenzar a hacer ejercicio, iniciar hábitos saludables, concretar los primeros pasos de sus sueños. ¿Por qué, si la persona sabe qué es lo que tiene que hacer, no lo hace?</p>
+
+    <p>Generalmente es porque el cerebro, en automático, no quiere hacerlo — y le gana al pensamiento consciente, que es el que "sabe que hay que hacerlo".</p>
+
+    <h2>No es pereza. Es neurobiología.</h2>
+
+    <p>No es una cuestión de pereza o falta de voluntad. La procrastinación tiene raíces biológicas. El cerebro subconsciente está programado para elegir la recompensa inmediata: elige solo lo que es placentero. Lo que detecta que produce incomodidad lo toma como un peligro posible, y por eso lo evade. Es un mecanismo de defensa.</p>
+
+    <p>Cuando una tarea genera ansiedad o inseguridad, la amígdala puede interpretarla como una amenaza para la autoestima. Esto implica un conflicto interno donde deseamos completar la tarea, pero nos sentimos incapaces de empezarla debido a factores emocionales.</p>
+
+    <div class="impact">Es una búsqueda de alivio inmediato a las emociones incómodas que se prioriza sobre los objetivos a largo plazo, creando un círculo vicioso de postergación.</div>
+
+    <h2>Las causas reales</h2>
+
+    <ul>
+      <li><strong>Miedo al fracaso:</strong> El temor de no hacer algo bien. Si no lo intentamos, al menos no fracasaremos.</li>
+      <li><strong>Perfeccionismo:</strong> El miedo a cometer errores nos paraliza — lo que se conoce como "parálisis por análisis".</li>
+      <li><strong>Fatiga por decisión:</strong> Demasiadas opciones o pasos poco claros pueden provocar agotamiento mental e inacción.</li>
+      <li><strong>Estrés o agotamiento:</strong> La sobrecarga mental o física puede hacer que evitemos ciertas tareas porque nos parecen demasiado grandes.</li>
+    </ul>
+
+    <h2>El protocolo de reversión</h2>
+
+    <p>Para que la consciencia y el subconsciente se pongan de acuerdo, es necesario darle al cerebro directivas claras con una motivación de resultados fuerte.</p>
+
+    <p><strong>Planificá:</strong> Generá un listado de lo que se debe y se quiere realizar con horarios, preferiblemente el día anterior. El cerebro necesita instrucciones concretas, no intenciones vagas.</p>
+
+    <p><strong>Cambiá cómo te hablás:</strong> En lugar de pensar "tengo que hacer esto y será terrible", reformulalo como "Elijo hacer esto para acercarme a mi objetivo".</p>
+
+    <p><strong>Visualizá tu futuro:</strong> Escribí cómo sería tu vida si ya hubieras alcanzado tus objetivos. Esto ayuda a entender el propósito de las acciones a corto plazo.</p>
+
+    <p><strong>Haz algo todos los días, por pequeño que sea.</strong> El movimiento constante, aunque mínimo, mantiene activo el circuito de acción del cerebro.</p>
+
+    <blockquote>El cerebro necesita que el subconsciente y el consciente se alineen. No basta con saber qué hay que hacer. Hay que darle al sistema nervioso una razón lo suficientemente poderosa para moverse.</blockquote>
+
+    <div class="impact">¿Qué cosa pequeña podés hacer ahora mismo para demostrarte que estás listo para tomar acción y ser dueño de tu vida?</div>
+  </div>
+  <div class="art-cta-box">
+    <p class="eyebrow">El siguiente paso</p>
+    <h3>¿Reconocés este mecanismo en tu propio liderazgo?</h3>
+    <p class="desc">El Neuro-Audit™ Estratégico es el diagnóstico inicial del Programa Soberanía Ejecutiva. 20 minutos. Sin compromiso. Con claridad real. Solo 3 vacantes por trimestre.</p>
+    <a href="https://wa.me/5492234973418?text=Hola%20Alejandra%2C%20le%C3%AD%20el%20art%C3%ADculo%20y%20quiero%20agendar%20un%20Neuro-Audit%E2%84%A2" class="btn-gold" target="_blank" rel="noopener">Agendar Neuro-Audit™ →</a>
+  </div>
+</article>
+
+<nav class="art-nav-cards">
+  <div class="art-nav-cards-inner">
+    <a href="biohacking-del-lenguaje.html" class="art-nav-card">
+      <p class="art-nav-card-dir">← Carta anterior</p>
+      <p class="art-nav-card-title">Biohacking del lenguaje: cómo tus palabras reconfiguran el cerebro.</p>
+    </a>
+    <a href="ansiedad-brujula-interna.html" class="art-nav-card art-nav-card--right">
+      <p class="art-nav-card-dir">Carta siguiente →</p>
+      <p class="art-nav-card-title">La ansiedad: de enemiga a brújula interna.</p>
+    </a>
+  </div>
+</nav>
+
+<footer>
+  <p class="footer-logo">Alejandra Dabos <span>· Real Mind Method™</span></p>
+  <p class="footer-meta">Mar del Plata · Argentina · contacto@alejandradabos.com</p>
+  <p class="footer-bottom">© 2025 Alejandra Dabos · Todos los derechos reservados</p>
+</footer>
+</body>
+</html>
