@@ -11,7 +11,6 @@ Sitio web oficial de Alejandra Dabos · Real Mind Method™
 /
 ├── index.html                  ← Sitio principal (servicios, método, artículos)
 ├── c-suite.html                ← Sección C-Suite / Executive Brain Partner
-├── libro.html                  ← Página del libro "El Impuesto Invisible del Liderazgo"
 ├── articulos.html              ← Índice del blog — Cartas del Método
 ├── alejandra-portrait.jpg      ← Foto profesional
 └── articulos/
@@ -33,7 +32,6 @@ Sitio web oficial de Alejandra Dabos · Real Mind Method™
 |-----|--------|
 | `/` | Inicio — servicios, método, sobre mí, artículos |
 | `/c-suite.html` | Posicionamiento C-Suite — Executive Brain Partner |
-| `/libro.html` | El Impuesto Invisible del Liderazgo |
 | `/articulos.html` | Todas las Cartas del Método |
 | `/articulos/[slug].html` | Carta individual |
 
