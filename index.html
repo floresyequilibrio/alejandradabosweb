@@ -2004,75 +2004,6 @@ footer {
 }
 
 /* ============================================
-   LIBRO — Promotional section
-   ============================================ */
-#libro {
-  background: var(--navy);
-  padding: var(--sp-8) var(--sp-5);
-  position: relative;
-  overflow: hidden;
-}
-#libro::before {
-  content: '';
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 65% 55% at 15% 70%, rgba(196,154,69,.07) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 85% 20%, rgba(196,154,69,.04) 0%, transparent 60%);
-  pointer-events: none; z-index: 0;
-}
-.libro-grid {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  align-items: center;
-  position: relative; z-index: 1;
-}
-.libro-cover-wrap {
-  display: flex; align-items: center; justify-content: center;
-}
-.libro-cover-svg {
-  width: 210px;
-  filter:
-    drop-shadow(-6px 0 12px rgba(196,154,69,.18))
-    drop-shadow(0 28px 52px rgba(0,0,0,.85));
-}
-.libro-content { color: var(--cream); }
-.libro-eyebrow {
-  font-size: 11px; letter-spacing: .25em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 1.4rem; font-weight: 400;
-}
-.libro-title {
-  font-family: var(--serif);
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  line-height: .98; font-weight: 300; letter-spacing: -.02em;
-  color: var(--cream); margin-bottom: 1rem;
-}
-.libro-title .accent { font-style: italic; color: var(--gold); }
-.libro-subtitle {
-  font-family: var(--serif); font-style: italic;
-  font-size: 1.1rem; color: rgba(250,248,244,.6);
-  font-weight: 300; margin-bottom: 1.8rem; line-height: 1.5;
-  border-left: 1px solid var(--gold); padding-left: 1.2rem;
-}
-.libro-desc {
-  font-size: .97rem; line-height: 1.75;
-  color: rgba(250,248,244,.75); margin-bottom: 2rem;
-}
-.libro-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-.libro-publisher {
-  margin-top: 1.8rem; padding-top: 1.4rem;
-  border-top: 1px solid var(--gold-line);
-  font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
-  color: rgba(250,248,244,.3);
-}
-@media (max-width: 860px) {
-  .libro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .libro-cover-svg { width: 160px; }
-}
-
-/* ============================================
    NEWSLETTER — integrated
    ============================================ */
 #newsletter {
@@ -2122,6 +2053,82 @@ footer {
   .nl-btn { width: 100%; }
 }
 
+
+/* ============================================
+   MOBILE NAV — HAMBURGER MENU
+   ============================================ */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  z-index: 200;
+}
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--cream, #FAF8F4);
+  border-radius: 1px;
+  transition: transform .3s ease, opacity .3s ease, width .3s ease;
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); width: 100%; }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); width: 100%; }
+@media (max-width: 880px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--dark, #0E0E0C);
+    border-bottom: 1px solid var(--gold-line, rgba(196,154,69,.18));
+    padding: .5rem 1.4rem 1.2rem;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { width: 100%; }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: .8rem 0;
+    font-size: 12px;
+    letter-spacing: .12em;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    white-space: normal;
+  }
+  .nav-links.open .nav-hide-md { display: list-item !important; }
+  .nav-links .nav-cta-mobile a,
+  .nav-links .nav-cta-mobile {
+    display: inline-block;
+    width: auto;
+    margin-top: 1rem;
+    border-bottom: none;
+    background: var(--gold);
+    color: var(--dark);
+    padding: .65rem 1.4rem;
+    border-radius: var(--r-pill, 999px);
+    font-size: 11px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 480px) {
+  .nav-cta { display: none; }
+}
 </style>
 </head>
 <body>
@@ -2143,9 +2150,11 @@ footer {
     <li class="nav-hide-md"><a href="#faq">Preguntas</a></li>
     <li class="nav-hide-md"><a href="#about">Sobre mí</a></li>
     <li><a href="#articles">Artículos</a></li>
-    <li><a href="libro.html">El Libro</a></li>
     <li><a href="c-suite.html" style="color:var(--gold)!important">C-Suite →</a></li>
+    <li class="nav-cta-mobile"><a href="https://wa.me/5492234973418?text=Hola%20Alejandra%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20inicial" target="_blank" rel="noopener">Agendar Diagnóstico</a></li>
+
   </ul>
+  <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
   <a href="https://wa.me/5492234973418?text=Hola%20Alejandra%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20inicial" class="nav-cta" target="_blank" rel="noopener">Agendar Diagnóstico</a>
 </nav>
 
@@ -3003,77 +3012,6 @@ footer {
 </section>
 
 
-<!-- =======================================================
-     LIBRO — El Impuesto Invisible del Liderazgo
-======================================================= -->
-<section id="libro">
-  <div class="libro-grid">
-    <div class="libro-cover-wrap reveal">
-      <svg viewBox="0 0 260 370" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="260" height="370" fill="#192742"/>
-  <rect x="0" y="0" width="14" height="370" fill="#0F1A2E"/>
-  <line x1="14" y1="0" x2="14" y2="370" stroke="#C49A45" stroke-width="0.4" opacity="0.5"/>
-  <rect x="18" y="12" width="234" height="346" fill="none" stroke="#C49A45" stroke-width="0.9" rx="1"/>
-  <rect x="23" y="17" width="224" height="336" fill="none" stroke="#C49A45" stroke-width="0.4" opacity="0.4" rx="1"/>
-
-  <!-- Top rule — as wide as the title block "EL IMPUESTO" -->
-  <line x1="50" y1="50" x2="224" y2="50" stroke="#C49A45" stroke-width="0.7"/>
-
-  <!-- EL IMPUESTO -->
-  <text x="137" y="72" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#F5F0E8" text-anchor="middle" letter-spacing="2.5">EL IMPUESTO</text>
-
-  <!-- Invisible -->
-  <text x="137" y="108" font-family="Georgia,serif" font-size="36" font-weight="300" fill="#C49A45" font-style="italic" text-anchor="middle">Invisible</text>
-
-  <!-- DEL LIDERAZGO -->
-  <text x="137" y="132" font-family="Georgia,serif" font-size="14.5" font-weight="700" fill="#F5F0E8" text-anchor="middle" letter-spacing="3">DEL LIDERAZGO</text>
-
-  <!-- Bottom rule of title — same width as top rule -->
-  <line x1="50" y1="144" x2="224" y2="144" stroke="#C49A45" stroke-width="0.7"/>
-
-  <!-- Subtitle — centered -->
-  <text x="137" y="161" font-family="Georgia,serif" font-size="10" fill="#C4BFB4" font-style="italic" text-anchor="middle">La biología decisional bajo presión.</text>
-
-  <!-- Circles -->
-  <circle cx="137" cy="238" r="52" fill="none" stroke="#C49A45" stroke-width="0.55" opacity="0.28"/>
-  <circle cx="137" cy="238" r="41" fill="none" stroke="#C49A45" stroke-width="0.5" opacity="0.28"/>
-  <circle cx="137" cy="238" r="30" fill="none" stroke="#C49A45" stroke-width="0.5" opacity="0.3"/>
-  <circle cx="137" cy="238" r="20" fill="none" stroke="#C49A45" stroke-width="0.5" opacity="0.33"/>
-  <circle cx="137" cy="238" r="10" fill="none" stroke="#C49A45" stroke-width="0.5" opacity="0.38"/>
-  <line x1="82" y1="238" x2="192" y2="238" stroke="#C49A45" stroke-width="0.5" opacity="0.35"/>
-  <line x1="137" y1="183" x2="137" y2="293" stroke="#C49A45" stroke-width="0.5" opacity="0.35"/>
-  <circle cx="137" cy="238" r="3.5" fill="none" stroke="#C49A45" stroke-width="0.9" opacity="0.8"/>
-  <circle cx="137" cy="238" r="1.8" fill="#C49A45"/>
-
-  <!-- Bottom rule — same width as title rules -->
-  <line x1="50" y1="308" x2="224" y2="308" stroke="#C49A45" stroke-width="0.7"/>
-
-  <!-- ALEJANDRA DABOS -->
-  <text x="137" y="323" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#C49A45" text-anchor="middle" letter-spacing="3">ALEJANDRA DABOS</text>
-
-  <!-- Real Mind Press -->
-  <text x="137" y="337" font-family="Georgia,serif" font-size="8.5" fill="#8A9BB5" font-style="italic" text-anchor="middle" letter-spacing="0.8">Real Mind Press</text>
-</svg>
-    </div>
-    <div class="libro-content">
-      <p class="libro-eyebrow reveal">Real Mind Press · Primera Edición</p>
-      <h2 class="libro-title reveal reveal-delay-1">
-        El Impuesto<br>
-        <span class="accent">Invisible</span><br>
-        del Liderazgo
-      </h2>
-      <p class="libro-subtitle reveal reveal-delay-2">La biología decisional bajo presión.</p>
-      <p class="libro-desc reveal reveal-delay-2">
-        Hay un deterioro que no aparece en ningún balance. No lo detecta el controller. No lo reporta el dashboard. Y quien lo vive es, casi siempre, el último en verlo. Este libro no es una guía para manejar el estrés. Es el mapa de lo que le está ocurriendo ahora mismo a la mayoría de los líderes que trabajan bajo presión sostenida — y que nadie está midiendo.
-      </p>
-      <div class="libro-ctas reveal reveal-delay-3">
-        <a href="libro.html" class="btn-gold">Ver el libro →</a>
-        <a href="https://wa.me/5492234973418?text=Hola%20Alejandra%2C%20quiero%20adquirir%20El%20Impuesto%20Invisible%20del%20Liderazgo" class="btn-ghost" target="_blank" rel="noopener">Adquirir ahora</a>
-      </div>
-      <p class="libro-publisher reveal reveal-delay-3">Real Mind Press · Mar del Plata, Argentina · Primera Edición</p>
-    </div>
-  </div>
-</section>
 
 <!-- =======================================================
      NEWSLETTER
@@ -3315,5 +3253,28 @@ footer {
   <a href="https://wa.me/5492234973418?text=Hola%20Alejandra%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20inicial" class="btn-gold" target="_blank" rel="noopener">Diagnóstico →</a>
 </div>
 
+
+<script>
+  // Menú móvil (hamburguesa)
+  (function(){
+    var navToggle = document.querySelector('.nav-toggle');
+    var navLinks = document.querySelector('.nav-links');
+    if (navToggle && navLinks) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.addEventListener('click', function(){
+        var isOpen = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open', isOpen);
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      navLinks.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', function(){
+          navLinks.classList.remove('open');
+          navToggle.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  })();
+</script>
 </body>
 </html>
