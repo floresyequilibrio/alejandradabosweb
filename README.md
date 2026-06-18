@@ -12,7 +12,10 @@ Sitio web oficial de Alejandra Dabos · Real Mind Method™
 ├── index.html                  ← Sitio principal (servicios, método, artículos)
 ├── c-suite.html                ← Sección C-Suite / Executive Brain Partner
 ├── articulos.html              ← Índice del blog — Cartas del Método
-├── alejandra-portrait.jpg      ← Foto profesional
+├── libro.html                  ← El Impuesto Invisible (landing del libro)
+├── politica-privacidad.html    ← Política de Privacidad
+├── terminos-condiciones.html   ← Términos y Condiciones
+├── alejandra-portrait.jpg      ← Foto profesional (pendiente — falta subir, usada en libro.html)
 └── articulos/
     ├── mapa-de-la-decision.html
     ├── neurobiologia-del-presente.html
@@ -34,6 +37,9 @@ Sitio web oficial de Alejandra Dabos · Real Mind Method™
 | `/c-suite.html` | Posicionamiento C-Suite — Executive Brain Partner |
 | `/articulos.html` | Todas las Cartas del Método |
 | `/articulos/[slug].html` | Carta individual |
+| `/libro.html` | El Impuesto Invisible — landing del libro |
+| `/politica-privacidad.html` | Política de Privacidad |
+| `/terminos-condiciones.html` | Términos y Condiciones |
 
 ---
 
@@ -52,4 +58,4 @@ En `index.html` y `articulos.html`, buscar el comentario `REEMPLAZAR con endpoin
 
 ---
 
-© 2025 Alejandra Dabos · Real Mind Method™
+© 2026 Alejandra Dabos · Real Mind Method™
