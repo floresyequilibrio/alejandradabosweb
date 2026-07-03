@@ -98,21 +98,98 @@ nav {
   color: var(--gold); font-style: italic; font-weight: 400;
   font-size: .68em; letter-spacing: .04em; margin-top: 3px;
 }
-.nav-links { display: flex; gap: 2.2rem; align-items: center; }
+.nav-links { display: flex; gap: 1.4rem; align-items: center; }
 .nav-links a {
-  font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+  font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
   color: rgba(255,255,255,.55); transition: color .25s ease; font-weight: 400;
+  white-space: nowrap;
 }
 .nav-links a:hover { color: var(--gold); }
+@media (max-width: 1200px) {
+  .nav-links { gap: 1rem; }
+  .nav-hide-md { display: none !important; }
+}
 .nav-cta {
   background: var(--gold); color: var(--dark);
-  font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
-  padding: .65rem 1.4rem; border-radius: var(--r-pill); transition: all .25s ease;
+  font-size: 10px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+  padding: .6rem 1.2rem; border-radius: var(--r-pill); transition: all .25s ease;
+  white-space: nowrap; flex-shrink: 0;
 }
 .nav-cta:hover { background: var(--gold-soft); transform: translateY(-1px); }
+.nav-links .nav-cta-mobile { display: none; }
+
+/* Hamburger button */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  z-index: 200;
+}
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--cream);
+  border-radius: 1px;
+  transition: transform .3s ease, opacity .3s ease, width .3s ease;
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); width: 100%; }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); width: 100%; }
+
 @media (max-width: 880px) {
-  .nav-links { display: none; }
   nav { padding: .9rem 1.4rem; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--dark);
+    border-bottom: 1px solid var(--gold-line);
+    padding: .5rem 1.4rem 1.2rem;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { width: 100%; }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: .8rem 0;
+    font-size: 12px;
+    letter-spacing: .12em;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    white-space: normal;
+  }
+  .nav-links.open .nav-hide-md { display: list-item !important; }
+  .nav-links .nav-cta-mobile a,
+  .nav-links .nav-cta-mobile {
+    display: inline-block;
+    width: auto;
+    margin-top: 1rem;
+    border-bottom: none;
+    background: var(--gold);
+    color: var(--dark);
+    padding: .65rem 1.4rem;
+    border-radius: var(--r-pill);
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .nav-cta { display: none; }
 }
 
 /* ============================================
@@ -544,12 +621,17 @@ footer {
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html">Inicio</a></li>
     <li><a href="index.html#method">Método</a></li>
+    <li class="nav-hide-md"><a href="index.html#antes-despues">Transformación</a></li>
     <li><a href="index.html#services">Servicios</a></li>
-    <li><a href="#de-que-trata">El libro</a></li>
+    <li class="nav-hide-md"><a href="index.html#faq">Preguntas</a></li>
+    <li class="nav-hide-md"><a href="index.html#about">Sobre mí</a></li>
+    <li><a href="libro.html" style="color:var(--gold)!important">El libro</a></li>
     <li><a href="index.html#articles">Artículos</a></li>
+    <li><a href="c-suite.html">C-Suite →</a></li>
+    <li class="nav-cta-mobile"><a href="https://wa.me/5492234973418?text=Hola%20Alejandra%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20inicial" target="_blank" rel="noopener">Agendar Diagnóstico</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
   <a href="https://wa.me/5492234973418?text=Hola%20Alejandra%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20inicial" class="nav-cta" target="_blank" rel="noopener">Agendar Diagnóstico</a>
 </nav>
 
@@ -846,6 +928,27 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+// Menú móvil (hamburguesa)
+(function(){
+  var navToggle = document.querySelector('.nav-toggle');
+  var navLinks = document.querySelector('.nav-links');
+  if (navToggle && navLinks) {
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.addEventListener('click', function(){
+      var isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+})();
 </script>
 
 </body>
