@@ -268,6 +268,21 @@ nav {
   line-height: 1.6;
   max-width: 460px;
 }
+.hero-book-byline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: rgba(196, 154, 69, .85);
+  letter-spacing: .01em;
+  margin: -1.4rem 0 2rem;
+  max-width: 460px;
+}
+.hero-book-byline a {
+  border-bottom: 1px solid rgba(196, 154, 69, .35);
+  transition: border-color .25s ease, color .25s ease;
+}
+.hero-book-byline a:hover { border-color: var(--gold); color: var(--gold); }
+.hero-book-byline .book-title { font-weight: 500; color: var(--gold); }
 .hero-tagline {
   font-family: var(--serif);
   font-style: italic;
@@ -316,6 +331,74 @@ nav {
   gap: .6rem;
 }
 .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+/* =======================================================
+   BOOK CTA — dedicated block on homepage
+======================================================= */
+#book-cta {
+  background: var(--warm);
+  padding: var(--sp-8) var(--sp-5);
+  border-top: 1px solid var(--gold-line);
+  border-bottom: 1px solid var(--gold-line);
+  position: relative; overflow: hidden;
+}
+#book-cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 55% 45% at 15% 50%, rgba(196,154,69,.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.book-cta-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.35fr;
+  gap: 4rem; align-items: center;
+  position: relative; z-index: 1;
+}
+.book-cta-left { display: flex; justify-content: center; }
+.book-cta-cover {
+  max-width: 340px; width: 100%;
+  box-shadow: 0 20px 60px rgba(30, 28, 24, .18), 0 4px 12px rgba(30, 28, 24, .1);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.book-cta-cover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 70px rgba(30, 28, 24, .22), 0 6px 14px rgba(30, 28, 24, .12);
+}
+.book-cta-h {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  line-height: 1.05; margin: 1rem 0 1.4rem;
+  letter-spacing: -.01em; color: var(--ink);
+}
+.book-cta-h .accent { font-style: italic; color: var(--gold); font-weight: 400; }
+.book-cta-quote {
+  font-family: var(--serif); font-style: italic;
+  font-size: 1.2rem; color: var(--muted);
+  line-height: 1.55; margin-bottom: 1.6rem;
+  border-left: 1px solid var(--gold); padding-left: 1rem;
+  max-width: 500px;
+}
+.book-cta-desc {
+  font-size: 15px; color: var(--ink);
+  line-height: 1.7; margin-bottom: 2.2rem;
+  max-width: 520px;
+}
+.book-cta-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.book-cta-actions .btn-ghost-dark {
+  background: transparent; color: var(--ink);
+  padding: 1rem 2rem; border-radius: var(--r-pill);
+  font-size: 12px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase;
+  transition: all .25s ease; border: 1px solid var(--stone);
+  display: inline-flex; align-items: center; gap: .6rem;
+}
+.book-cta-actions .btn-ghost-dark:hover { border-color: var(--gold); color: var(--gold); }
+@media (max-width: 860px) {
+  .book-cta-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .book-cta-right { text-align: center; }
+  .book-cta-quote { margin-inline: auto; }
+  .book-cta-desc { margin-inline: auto; }
+  .book-cta-actions { justify-content: center; }
+}
 
 .hero-right {
   position: relative;
@@ -2151,6 +2234,7 @@ footer {
     <li class="nav-hide-md"><a href="#about">Sobre mí</a></li>
     <li><a href="libro.html">El libro</a></li>
     <li><a href="#articles">Artículos</a></li>
+    <li><a href="conferencias.html">Conferencias</a></li>
     <li><a href="c-suite.html" style="color:var(--gold)!important">C-Suite →</a></li>
     <li class="nav-cta-mobile"><a href="https://wa.me/5492234973418?text=Hola%20Alejandra%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20inicial" target="_blank" rel="noopener">Agendar Diagnóstico</a></li>
 
@@ -2172,6 +2256,10 @@ footer {
     </h1>
 
     <p class="hero-method-tag reveal reveal-delay-2">Psicoterapeuta integrativa · Coach Internacional ICC · Neurosicoeducadora UBA · Columnista en Psicología y Mente</p>
+
+    <p class="hero-book-byline reveal reveal-delay-2">
+      Autora de <a href="libro.html"><span class="book-title">El Impuesto Invisible del Liderazgo</span></a>
+    </p>
 
     <p class="hero-tagline reveal reveal-delay-3">
       Para mentes que ya intentaron todo.<br>La intervención precisa.
@@ -2851,6 +2939,33 @@ footer {
 </section>
 
 <!-- =======================================================
+     BOOK CTA — dedicated block
+======================================================= -->
+<section id="book-cta">
+  <div class="book-cta-inner">
+    <div class="book-cta-left reveal">
+      <a href="libro.html"><img class="book-cta-cover" src="img/portada-libro.png" alt="El Impuesto Invisible del Liderazgo — portada"></a>
+    </div>
+    <div class="book-cta-right">
+      <p class="eyebrow reveal">De la misma autora</p>
+      <h2 class="book-cta-h reveal reveal-delay-1">
+        El Impuesto <span class="accent">Invisible</span><br>del Liderazgo
+      </h2>
+      <p class="book-cta-quote reveal reveal-delay-2">
+        Lo que tu cerebro decide antes de que tú lo sepas, y lo que le cuesta a tu empresa.
+      </p>
+      <p class="book-cta-desc reveal reveal-delay-2">
+        Un mapa neurobiológico del costo oculto que pagan los líderes cuando su sistema nervioso toma decisiones antes que su corteza prefrontal.
+      </p>
+      <div class="book-cta-actions reveal reveal-delay-3">
+        <a href="libro.html" class="btn-gold">Conocer el libro →</a>
+        <a href="https://go.hotmart.com/F106521852G?dp=1" class="btn-ghost-dark" target="_blank" rel="noopener">Comprar en Hotmart</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =======================================================
      ABOUT
 ======================================================= -->
 <section id="about">
@@ -2863,7 +2978,7 @@ footer {
           <strong>Veinte años</strong> de práctica clínica privada acompañando procesos de transformación profunda. <strong>Cuatro años</strong> como External Brain Partner para CEOs y directorios de empresas medianas y grandes. Fundadora del <strong>Real Mind Method™</strong>.
         </p>
         <p>
-          Columnista regular en <strong>Psicología y Mente</strong>, la mayor plataforma de divulgación científica en español, con más de cuatro millones de lectores mensuales.
+          Columnista regular en <strong>Psicología y Mente</strong>, la mayor plataforma de divulgación científica en español, con más de cuatro millones de lectores mensuales. Autora de <em>El Impuesto Invisible del Liderazgo</em>, disponible en Hotmart.
         </p>
         <p>
           Mi intervención es quirúrgica. No trato síntomas superficiales de estrés: recableo la intersección entre el rigor científico de la neurociencia cognitiva y la agilidad estratégica del coaching internacional. Cuando la identidad evoluciona, el alto rendimiento deja de ser un esfuerzo.
