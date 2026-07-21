@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "mapa-de-la-decision",
+    "number": "01",
+    "title": "El Mapa de la Decisión",
+    "subtitle": "La revolución neurobiológica del Instante Cero.",
+    "excerpt": "Lo que llamamos \"tomar una decisión\" es la última escena de un proceso que ya ocurrió. Antes de que pienses, tu cerebro ya predijo, descartó e inclinó la balanza. Esta carta explora por qué la calidad de tus decisiones depende de un mecanismo que opera antes de que lo notes.",
+    "readTime": "6 min",
+    "description": "La revolución neurobiológica del Instante Cero.",
+    "cardTitle": "El Mapa de la Decisión: la revolución neurobiológica del Instante Cero."
+  },
+  {
+    "slug": "neurobiologia-del-presente",
+    "number": "02",
+    "title": "La Neurobiología del Presente",
+    "subtitle": "Autoliderazgo y soberanía biológica.",
+    "excerpt": "Hay personas que tienen agenda, equipo, ingresos y resultados, y aún así no se sienten dueñas de su propio día. Esa distancia entre el control externo y la autoridad interna es lo que llamo, en términos clínicos, falta de soberanía biológica.",
+    "readTime": "7 min",
+    "description": "Autoliderazgo y soberanía biológica.",
+    "cardTitle": "La Neurobiología del Presente: autoliderazgo y soberanía biológica."
+  },
+  {
+    "slug": "sindrome-del-impostor",
+    "number": "03",
+    "title": "¿Crees que tu éxito es suerte?",
+    "subtitle": "El síndrome del impostor en el liderazgo de alto rendimiento.",
+    "excerpt": "El síndrome del impostor no aparece en quienes saben poco. Aparece, casi exclusivamente, en personas que saben mucho. Esa paradoja es la primera pista de que no es un problema de información, sino de identidad bajo presión.",
+    "readTime": "5 min",
+    "description": "El síndrome del impostor en el liderazgo de alto rendimiento.",
+    "cardTitle": "¿Crees que tu éxito es suerte? El síndrome del impostor."
+  },
+  {
+    "slug": "sesgos-cognitivos-inversiones",
+    "number": "04",
+    "title": "Los sesgos cognitivos que corrompen grandes inversiones",
+    "subtitle": "El costo invisible de la mente y los patrones de pensamiento que obstaculizan la toma de decisiones financieras.",
+    "excerpt": "Un CEO me contactó tres meses después de firmar una inversión que, en el fondo, ya sabía que estaba mal. No era un hombre impulsivo. Era brillante, experimentado, con décadas de decisiones exitosas detrás. Y aun así, su cerebro le había jugado una trampa silenciosa.",
+    "readTime": "7 min",
+    "description": "El costo invisible de la mente y los patrones de pensamiento que obstaculizan la toma de decisiones financieras.",
+    "cardTitle": "Los sesgos cognitivos que corrompen grandes inversiones."
+  },
+  {
+    "slug": "decir-no-sin-culpa",
+    "number": "05",
+    "title": "Cómo decir NO sin culpa y recuperar tu energía",
+    "subtitle": "Aprende a poner límites desde la neurociencia y protege tu ancho de banda cognitivo.",
+    "excerpt": "Hay una sensación inconfundible que llega justo después de que tu boca dice \"sí\" mientras tu interior grita un \"NO\" rotundo. Ese conflicto no es un defecto de carácter. Es neurobiología que podés reconfigurar.",
+    "readTime": "6 min",
+    "description": "Aprende a poner límites desde la neurociencia y protege tu ancho de banda cognitivo.",
+    "cardTitle": "Cómo entrenar tu cerebro para decir NO sin culpa y recuperar tu energía."
+  },
+  {
+    "slug": "biohacking-del-lenguaje",
+    "number": "06",
+    "title": "Biohacking del lenguaje",
+    "subtitle": "Cómo las palabras reconfiguran el cerebro y moldean la capacidad de respuesta ante el mundo.",
+    "excerpt": "Las palabras que usás en tu próxima reunión van a elevar el cortisol de tu equipo o van a activar su dopamina. No es metáfora. Es la neurobiología del liderazgo que ningún MBA enseña — y que podés empezar a aplicar hoy.",
+    "readTime": "6 min",
+    "description": "Cómo las palabras reconfiguran el cerebro y moldean la capacidad de respuesta ante el mundo.",
+    "cardTitle": "Biohacking del lenguaje: cómo tus palabras reconfiguran el cerebro."
+  },
+  {
+    "slug": "procrastinacion-no-es-pereza",
+    "number": "07",
+    "title": "Procrastinación: por qué no es pereza",
+    "subtitle": "Las causas reales de la postergación y el protocolo neurobiológico para revertirla.",
+    "excerpt": "¿Por qué, si sabés exactamente qué tenés que hacer, no lo hacés? La respuesta no está en la disciplina ni en la motivación. Está en un mecanismo neurológico que opera antes de que tu consciencia pueda intervenir.",
+    "readTime": "5 min",
+    "description": "Las causas reales de la postergación y el protocolo neurobiológico para revertirla.",
+    "cardTitle": "Procrastinación: por qué no es pereza y cómo superar el hábito de postergar."
+  },
+  {
+    "slug": "ansiedad-brujula-interna",
+    "number": "08",
+    "title": "La ansiedad: de enemiga a brújula interna",
+    "subtitle": "La ansiedad no es el problema. Es el mensajero. Aprende a leer lo que te está diciendo.",
+    "excerpt": "La ansiedad no está aquí para atacarte. Está aquí para avisarte que algo en tu vida no está alineado. Aprender a leer ese mensaje — en lugar de apagarlo — es una de las habilidades más poderosas que podés desarrollar.",
+    "readTime": "5 min",
+    "description": "La ansiedad no es el problema. Es el mensajero. Aprende a leer lo que te está diciendo.",
+    "cardTitle": "La ansiedad: de enemiga a brújula interna."
+  }
+]
