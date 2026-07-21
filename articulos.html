@@ -78,6 +78,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:
 .cartas-h{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.1;margin-top:1rem;color:var(--ink)}
 .cartas-h .accent{font-style:italic;color:var(--gold)}
 .cartas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1px;max-width:1200px;margin:0 auto;background:var(--stone)}
+.cartas-loading{grid-column:1/-1;background:var(--cream);padding:3rem 2rem;text-align:center;color:var(--muted);font-style:italic}
 .carta-card{background:var(--cream);padding:2.4rem 2rem;display:flex;flex-direction:column;transition:background .25s ease;position:relative}
 .carta-card:hover{background:var(--warm)}
 .carta-num{font-family:var(--serif);font-style:italic;font-size:1rem;color:rgba(196,154,69,.5);margin-bottom:.6rem;display:block}
@@ -262,88 +263,8 @@ footer{background:var(--navy-2);padding:3rem 2rem;text-align:center;border-top:1
     <h2 class="cartas-h reveal reveal-delay-1">El archivo del <span class="accent">Real Mind Method™</span></h2>
   </div>
 
-  <div class="cartas-grid">
-
-    <a href="articulos/mapa-de-la-decision.html" class="carta-card reveal">
-      <span class="carta-num">Carta 01</span>
-      <h3 class="carta-title">El Mapa de la Decisión: la revolución neurobiológica del Instante Cero.</h3>
-      <p class="carta-extract">Lo que llamamos "tomar una decisión" es la última escena de un proceso que ya ocurrió. Antes de que pienses, tu cerebro ya predijo, descartó e inclinó la balanza. Esta carta explora por qué la calidad de tus decisiones depende de un mecanismo que opera antes de que lo notes.</p>
-      <div class="carta-footer">
-        <span class="carta-link">Leer carta →</span>
-        <span class="carta-time">6 min</span>
-      </div>
-    </a>
-
-    <a href="articulos/neurobiologia-del-presente.html" class="carta-card reveal reveal-delay-1">
-      <span class="carta-num">Carta 02</span>
-      <h3 class="carta-title">La Neurobiología del Presente: autoliderazgo y soberanía biológica.</h3>
-      <p class="carta-extract">Hay personas que tienen agenda, equipo, ingresos y resultados, y aún así no se sienten dueñas de su propio día. Esa distancia entre el control externo y la autoridad interna es lo que llamo, en términos clínicos, falta de soberanía biológica.</p>
-      <div class="carta-footer">
-        <span class="carta-link">Leer carta →</span>
-        <span class="carta-time">7 min</span>
-      </div>
-    </a>
-
-    <a href="articulos/sindrome-del-impostor.html" class="carta-card reveal reveal-delay-2">
-      <span class="carta-num">Carta 03</span>
-      <h3 class="carta-title">¿Crees que tu éxito es suerte? El síndrome del impostor.</h3>
-      <p class="carta-extract">El síndrome del impostor no aparece en quienes saben poco. Aparece, casi exclusivamente, en personas que saben mucho. Esa paradoja es la primera pista de que no es un problema de información, sino de identidad bajo presión.</p>
-      <div class="carta-footer">
-        <span class="carta-link">Leer carta →</span>
-        <span class="carta-time">5 min</span>
-      </div>
-    </a>
-
-    <a href="articulos/sesgos-cognitivos-inversiones.html" class="carta-card reveal">
-      <span class="carta-num">Carta 04</span>
-      <h3 class="carta-title">Los sesgos cognitivos que corrompen grandes inversiones.</h3>
-      <p class="carta-extract">Un CEO me contactó tres meses después de firmar una inversión que, en el fondo, ya sabía que estaba mal. No era un hombre impulsivo. Era brillante, experimentado, con décadas de decisiones exitosas detrás. Y aun así, su cerebro le había jugado una trampa silenciosa.</p>
-      <div class="carta-footer">
-        <span class="carta-link">Leer carta →</span>
-        <span class="carta-time">7 min</span>
-      </div>
-    </a>
-
-    <a href="articulos/decir-no-sin-culpa.html" class="carta-card reveal reveal-delay-1">
-      <span class="carta-num">Carta 05</span>
-      <h3 class="carta-title">Cómo entrenar tu cerebro para decir NO sin culpa y recuperar tu energía.</h3>
-      <p class="carta-extract">Hay una sensación inconfundible que llega justo después de que tu boca dice "sí" mientras tu interior grita un "NO" rotundo. Ese conflicto no es un defecto de carácter. Es neurobiología que podés reconfigurar.</p>
-      <div class="carta-footer">
-        <span class="carta-link">Leer carta →</span>
-        <span class="carta-time">6 min</span>
-      </div>
-    </a>
-
-    <a href="articulos/biohacking-del-lenguaje.html" class="carta-card reveal reveal-delay-2">
-      <span class="carta-num">Carta 06</span>
-      <h3 class="carta-title">Biohacking del lenguaje: cómo tus palabras reconfiguran el cerebro.</h3>
-      <p class="carta-extract">Las palabras que usás en tu próxima reunión van a elevar el cortisol de tu equipo o van a activar su dopamina. No es metáfora. Es la neurobiología del liderazgo que ningún MBA enseña — y que podés empezar a aplicar hoy.</p>
-      <div class="carta-footer">
-        <span class="carta-link">Leer carta →</span>
-        <span class="carta-time">6 min</span>
-      </div>
-    </a>
-
-    <a href="articulos/procrastinacion-no-es-pereza.html" class="carta-card reveal">
-      <span class="carta-num">Carta 07</span>
-      <h3 class="carta-title">Procrastinación: por qué no es pereza y cómo superar el hábito de postergar.</h3>
-      <p class="carta-extract">¿Por qué, si sabés exactamente qué tenés que hacer, no lo hacés? La respuesta no está en la disciplina ni en la motivación. Está en un mecanismo neurológico que opera antes de que tu consciencia pueda intervenir.</p>
-      <div class="carta-footer">
-        <span class="carta-link">Leer carta →</span>
-        <span class="carta-time">5 min</span>
-      </div>
-    </a>
-
-    <a href="articulos/ansiedad-brujula-interna.html" class="carta-card reveal reveal-delay-1">
-      <span class="carta-num">Carta 08</span>
-      <h3 class="carta-title">La ansiedad: de enemiga a brújula interna.</h3>
-      <p class="carta-extract">La ansiedad no está aquí para atacarte. Está aquí para avisarte que algo en tu vida no está alineado. Aprender a leer ese mensaje — en lugar de apagarlo — es una de las habilidades más poderosas que podés desarrollar.</p>
-      <div class="carta-footer">
-        <span class="carta-link">Leer carta →</span>
-        <span class="carta-time">5 min</span>
-      </div>
-    </a>
-
+  <div class="cartas-grid" id="cartas-grid">
+    <p class="cartas-loading">Cargando cartas…</p>
   </div>
 </section>
 
@@ -437,6 +358,49 @@ function handleNL(e) {
           navToggle.setAttribute('aria-expanded', 'false');
         });
       });
+    }
+  })();
+</script>
+
+<script>
+  // Cargar cartas dinámicamente desde articulos/index.json
+  (async function loadCartas() {
+    const grid = document.getElementById('cartas-grid');
+    if (!grid) return;
+
+    try {
+      const resp = await fetch('articulos/index.json');
+      if (!resp.ok) throw new Error('index.json no disponible');
+      const cartas = await resp.json();
+
+      const delays = ['', ' reveal-delay-1', ' reveal-delay-2'];
+      const html = cartas.map((c, i) => {
+        const delay = delays[i % 3];
+        const displayTitle = c.cardTitle || (c.title + ': ' + c.subtitle);
+        return `<a href="articulo.html?slug=${c.slug}" class="carta-card reveal${delay}">
+          <span class="carta-num">Carta ${c.number}</span>
+          <h3 class="carta-title">${displayTitle}</h3>
+          <p class="carta-extract">${c.excerpt}</p>
+          <div class="carta-footer">
+            <span class="carta-link">Leer carta →</span>
+            <span class="carta-time">${c.readTime}</span>
+          </div>
+        </a>`;
+      }).join('');
+
+      grid.innerHTML = html;
+
+      // Reactivar reveal para las nuevas cards
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('on'); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+      grid.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    } catch (err) {
+      console.error(err);
+      grid.innerHTML = '<p class="cartas-loading">No se pudieron cargar las cartas. Recargá la página.</p>';
     }
   })();
 </script>
