@@ -78,5 +78,95 @@
     "readTime": "5 min",
     "description": "La ansiedad no es el problema. Es el mensajero. Aprende a leer lo que te está diciendo.",
     "cardTitle": "La ansiedad: de enemiga a brújula interna."
+  },
+  {
+    "slug": "procrastinacion-no-es-pereza",
+    "number": "09",
+    "title": "Procrastinación",
+    "subtitle": "Por qué no es pereza y cómo superar el hábito de postergar.",
+    "excerpt": "La procrastinación no es un defecto de carácter. Es una respuesta neurobiológica al malestar, y el cerebro la ejecuta con una eficiencia que ningún hábito de productividad puede combatir si primero no se entiende el mecanismo.",
+    "readTime": "7 min",
+    "description": "Descubre las causas reales de la procrastinación y aprende a romper el círculo de postergar desde la neurociencia.",
+    "cardTitle": "Procrastinación: por qué no es pereza y cómo superar el hábito de postergar."
+  },
+  {
+    "slug": "reloj-que-no-elegiste",
+    "number": "10",
+    "title": "El reloj que no elegiste",
+    "subtitle": "Por qué forzar tu ritmo biológico tiene un costo que no ves.",
+    "excerpt": "Tu cronotipo no es una preferencia. Es una arquitectura neurobiológica que determina cuándo tu corteza prefrontal opera a máxima capacidad. Ignorarla no te hace más disciplinado. Te cuesta un costo que nunca aparece en ningún análisis de rendimiento.",
+    "readTime": "6 min",
+    "description": "Cómo el cronotipo influye en el sueño, la energía y el rendimiento diario — y qué ocurre cuando lo ignorás sistemáticamente.",
+    "cardTitle": "El reloj que no elegiste: por qué forzar tu ritmo biológico tiene un costo que no ves."
+  },
+  {
+    "slug": "cansancio-que-no-se-cura",
+    "number": "11",
+    "title": "El cansancio que no se cura durmiendo",
+    "subtitle": "Qué es la carga alostática y por qué dormir más no siempre resuelve el agotamiento.",
+    "excerpt": "Hay un tipo de agotamiento que no desaparece con el fin de semana. Ni con las vacaciones. Ni con dormir más. Si lo reconocés, lo que estás experimentando no es cansancio ordinario. Es carga alostática — y tiene una biología distinta que requiere un abordaje distinto.",
+    "readTime": "6 min",
+    "description": "Qué es la carga alostática y por qué el agotamiento de un líder moderno no responde a las soluciones que funcionan para el cansancio ordinario.",
+    "cardTitle": "El cansancio que no se cura durmiendo: qué es la carga alostática."
+  },
+  {
+    "slug": "cerebro-bajo-asedio",
+    "number": "12",
+    "title": "El cerebro bajo asedio",
+    "subtitle": "Cómo el estrés extremo puede alterar el juicio incluso en líderes experimentados.",
+    "excerpt": "Tenía todo lo que define el éxito visible: empresa sólida, equipo de confianza, resultados que justificaban cualquier sacrificio. Lo que no tenía era acceso a su propio juicio. Y eso no se veía desde adentro.",
+    "readTime": "7 min",
+    "description": "El caso real de un empresario que tenía todo el éxito y cómo la neurociencia explica lo que le ocurrió — y cómo pudo revertirlo.",
+    "cardTitle": "El cerebro bajo asedio: cuando el estrés extremo altera el juicio de un líder."
+  },
+  {
+    "slug": "sindrome-de-hubris",
+    "number": "13",
+    "title": "El síndrome de Hubris",
+    "subtitle": "Cuando el poder se convierte en trampa.",
+    "excerpt": "El síndrome de Hubris no ataca a los líderes mediocres. Ataca a los que han tenido razón demasiadas veces seguidas. Y cuando llega, el sistema que debería detectarlo es exactamente el sistema que está comprometido.",
+    "readTime": "6 min",
+    "description": "Lo que el éxito sostenido le hace al cerebro de un líder — y por qué los más brillantes son los más vulnerables.",
+    "cardTitle": "El síndrome de Hubris: cuando el poder se convierte en trampa."
+  },
+  {
+    "slug": "cerebro-limpieza-nocturna",
+    "number": "14",
+    "title": "Tu cerebro tiene un turno de limpieza nocturno",
+    "subtitle": "Y probablemente lo estás cancelando.",
+    "excerpt": "Mientras dormís, tu cerebro hace algo que no puede hacer cuando estás despierto: lavarse. El sistema glinfático — descubierto hace apenas una década — elimina los desechos metabólicos acumulados durante el día. Cancelar ese proceso no es trabajar más. Es acumular deuda neurológica que aparecerá en tus decisiones antes de que la veas venir.",
+    "readTime": "6 min",
+    "description": "Qué ocurre en el cerebro mientras dormimos, qué es el sistema glinfático, y por qué el sueño resulta tan importante para el rendimiento cognitivo de un líder.",
+    "cardTitle": "Tu cerebro tiene un turno de limpieza nocturno (y probablemente lo estás cancelando)."
+  },
+  {
+    "slug": "cabina-de-mando",
+    "number": "15",
+    "title": "La cabina de mando",
+    "subtitle": "Los tres sistemas automáticos que toman decisiones antes de que puedas pensarlas.",
+    "excerpt": "Antes de que tu corteza prefrontal emita una sola opinión sobre la situación, tres sistemas automáticos ya evaluaron la amenaza, sesgaron tu percepción y prepararon una respuesta. Entender esa cabina de mando no es opcional para un líder que quiere gobernar desde su criterio y no desde su biología.",
+    "readTime": "7 min",
+    "description": "Cómo la biología puede tomar el control de las decisiones de un líder bajo presión — y qué significa eso para quien cree que está eligiendo de forma racional.",
+    "cardTitle": "La cabina de mando: los tres sistemas automáticos que deciden antes de que puedas pensarlos."
+  },
+  {
+    "slug": "neuroplasticidad-liderazgo",
+    "number": "16",
+    "title": "El cerebro que puede cambiar",
+    "subtitle": "Neuroplasticidad y liderazgo.",
+    "excerpt": "Durante décadas, la neurociencia creyó que el cerebro adulto era estructuralmente fijo. Hoy sabemos que se modifica activamente en respuesta a la experiencia — y eso cambia radicalmente lo que es posible para un líder que quiere cambiar los patrones que reconoce como limitantes.",
+    "readTime": "6 min",
+    "description": "Lo que la ciencia descubrió sobre las rutas cerebrales que creías imposibles de modificar — y qué significa para un líder que quiere cambiar patrones de respuesta arraigados.",
+    "cardTitle": "El cerebro que puede cambiar: neuroplasticidad y liderazgo."
+  },
+  {
+    "slug": "sesgos-inversiones-ejecutivos",
+    "number": "17",
+    "title": "Cuando la mente sabotea las grandes decisiones",
+    "subtitle": "Los sesgos cognitivos que ningún análisis financiero puede ver.",
+    "excerpt": "Las decisiones de inversión más costosas raramente son las que se toman con información insuficiente. Son las que se toman con información suficiente pero con un cerebro en el que la información ya llegó tarde — porque el sistema límbico había decidido antes.",
+    "readTime": "6 min",
+    "description": "Cómo los sesgos cognitivos afectan las decisiones de inversión de alto nivel — y por qué los ejecutivos más experimentados son los más vulnerables.",
+    "cardTitle": "Cuando la mente sabotea las grandes decisiones: sesgos cognitivos en inversiones."
   }
 ]
